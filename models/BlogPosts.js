@@ -35,7 +35,7 @@ const attributes = {
 
 module.exports = (sequelize) => {
   const BlogPosts = sequelize.define('BlogPosts', attributes, {
-    tableName: 'blog_posts', 
+    tableName: 'BlogPosts', 
     timestamps: false,
     underscored: true,
   });

@@ -28,9 +28,9 @@ const attributes = {
 
 module.exports = (sequelize) => {
   const User = sequelize.define('User', attributes, {
-    tableName: 'users', 
+    tableName: 'Users', 
     timestamps: false,
-    underscored: true,
+    underscored: false,
   });
 
   return User;

@@ -14,18 +14,18 @@ const attributes = {
 
 module.exports = (sequelize) => {
   const PostsCategories = sequelize.define('PostsCategories', attributes, {
-    tableName: 'postsCategories', 
+    tableName: 'PostsCategories', 
     timestamps: false,
   });
   PostsCategories.associate = (models) => {
     PostsCategories.belongsToMany(models.Categories, { foreignKey: 'postId', 
       otherKey: 'categoryId', 
-      through: PostCategories, 
+      through: PostsCategories, 
       as: 'categories', 
     });
     PostsCategories.belongsToMany(models.Categories, { foreignKey: 'categoryId', 
       otherKey: 'postId', 
-      through: PostCategories, 
+      through: PostsCategories, 
       as: 'posts', 
     });
   };
