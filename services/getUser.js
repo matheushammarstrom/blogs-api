@@ -1,0 +1,7 @@
+const { User } = require('../models');
+
+module.exports = async (id) => {
+  const user = await User.findOne({ where: { id } });
+
+  return user;
+};
