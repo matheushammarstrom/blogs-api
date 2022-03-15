@@ -7,7 +7,6 @@ module.exports = async (req, res, next) => {
     const { error } = userSchema.validate(req.body);
     if (error) {
       const [code, message] = error.message.split('|');
-      console.log(code);
       return res.status(code).json({ message });
     }
     const { displayName, password, image, email } = req.body;

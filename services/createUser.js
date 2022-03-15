@@ -8,6 +8,6 @@ module.exports = async (userInfo) => {
   if (userExists) return null;
 
   const newUser = await User.create(userInfo); 
-  
+
   return newUser;
 };
