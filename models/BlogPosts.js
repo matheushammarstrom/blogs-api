@@ -23,13 +23,13 @@ const attributes = {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  pusblished: {
+  published: {
     type: DataTypes.DATE,
-    field: 'createdAt',
+    // field: 'createdAt',
   },
-  uptaded: {
+  updated: {
     type: DataTypes.DATE,
-    field: 'updatedAt',
+    // field: 'updatedAt',
   },
 };
 
