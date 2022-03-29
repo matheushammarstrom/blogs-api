@@ -4,8 +4,6 @@ module.exports = async () => {
   const postCategories = await PostsCategories.findAll({ });
 
   console.log(postCategories);
-
-  // const usersasdas = await BlogPosts.findAll({ include: [{ model: User, as: 'user' }, { model: PostsCategories, as: 'categories', through: { where: { completed: true } } }] });
   const users = await BlogPosts.findAll({
     include: [{
       model: User,
